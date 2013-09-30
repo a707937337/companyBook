@@ -1,0 +1,43 @@
+<div class="pageContent">
+<form method="post" action="<{$smarty.const.SITE_URL}>index.php/book/save" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+<input type="hidden" name="fast_id" value="<{$fast.id}>">
+<div class="pageFormContent" layoutH="58">
+<div class="unit">
+  <label>菜名：</label><span><{$fast.name}></span>
+ </div>
+  <div class="unit">
+    <label>价格：</label><span><{$fast.price}></span>  元
+ </div>
+ <div class="unit">
+    <label>餐馆：</label>
+	<span><{$fast.restaurant_id}></span>
+	
+	
+	
+ </div>
+ <div class="unit">
+	<label>分类：</label>
+   <span><{$fast.cat_id}></span>
+	
+	
+	
+ </div>
+ <div class="unit">
+	<label>备注：</label>
+   <textarea cols="50" rows="5" name="note">
+	  
+   
+   </textarea>
+	
+	
+	
+ </div>
+</div>
+<div class="formBar">
+<ul>
+ <li>
+  <div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div>
+</li>
+<li>
+   <div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div>
+   </li></ul></div></form></div>

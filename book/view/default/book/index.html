@@ -1,0 +1,66 @@
+<{include file="../common/pagerForm.html"}>
+	
+<div class="pageHeader">
+	<form  rel="pagerForm" onsubmit="return navTabSearch(this);" action="<{$smarty.const.SITE_URL}>index.php/book/index" method="post">
+	<div class="searchBar">
+		<table class="searchContent">
+			<tr>
+				<td>
+					名称：<input type="text" name="name" />
+				</td>
+				<td><div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div></td>
+			</tr>
+		</table>
+	</div>
+	</form>
+</div>
+
+
+<div class="pageContent">
+    <div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="delete" href="<{$smarty.const.SITE_URL}>index.php/book/delete/id/{sid_obj}" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+			<li class="line">line</li>
+		</ul>
+	</div>
+	<table class="table" width="100%" layoutH="115">
+		<thead>
+			<tr>
+				<th width="60" orderField="id" <{if isset($smarty.post.orderField) and $smarty.post.orderField eq 'id'}>class="<{$smarty.post.orderDirection}>"<{/if}>>序号</th>
+				<th>菜名</th>
+				<th>价格(元)</th>
+				<th>餐馆</th>
+				<th>分类</th>
+				<th>点菜时间</th>
+				<th>备注</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+		<{foreach from=$data key=k item=v}>
+			<tr target="sid_obj" rel="<{$v.id}>">
+				<td><{$v.id}></td>
+				<td <{if date('Y-m-d',time())==date('Y-m-d',$v.addtime)}>style="color:red"<{/if}>><{$v.book.name}></td>
+				<td><{$v.book.price}></td>
+				<td><{$v.book.restaurant_id}></td>
+				<td><{$v.book.cat_id}></td>
+				<td><{$v.addtime|date_format:"%Y-%m-%d  %H:%M:%S"}></td>
+				<td><{$v.note}></td>
+				<td><a  href="<{$smarty.const.SITE_URL}>index.php/book/delete/id/<{$v.id}>" target="ajaxTodo" title="确定要删除吗?">删除</a></td>
+			</tr>
+		<{/foreach}>	
+		</tbody>
+	</table>
+	
+	
+	<div class="panelBar">
+		<div class="pages">
+			<span>共<{$countNum}>条</span>
+		</div>
+		<div class="pagination" targetType="navTab" totalCount="<{$countNum}>" numPerPage="<{$preNum}>" pageNumShown="10" currentPage="<{$nowPage}>"></div>
+	</div>
+</div>
+	
+	
+	
+	

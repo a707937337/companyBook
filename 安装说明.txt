@@ -1,0 +1,6 @@
+1、访问index.php  本站使用了pathinfo模式，安装前请确认服务器是否支持pathinfo模式
+2、根据程序提示操作即可安装程序
+3、版权归本作者所有，禁止用于商业用途 www.lijinhuan.com
+4、本程序的使用环境为php 5.3及以上 + mysql5.5及以上 + apache2.2及以上
+5、程序架构于轻量级框架firezp之上，版权归作者所有 www.lijinhuan.com
+6、前端采用的是开源前端框架dwz，版权归原作者所有 

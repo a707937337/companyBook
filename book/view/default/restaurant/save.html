@@ -1,0 +1,23 @@
+<div class="pageContent">
+<form method="post" action="<{$smarty.const.SITE_URL}>index.php/restaurant/save" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+
+<div class="pageFormContent" layoutH="58">
+<div class="unit">
+  <label>餐馆名称：</label><input type="text" class="required"   name="name" value="">
+ </div>
+ 
+ <div class="unit">
+    <label>地址：</label><input type="text" class="required"   name="address" value="">
+ </div>
+ <div class="unit">
+    <label>电话：</label><input type="text" class="required"   name="tel" value="">
+ </div>
+</div>
+<div class="formBar">
+<ul>
+ <li>
+  <div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div>
+</li>
+<li>
+   <div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div>
+   </li></ul></div></form></div>

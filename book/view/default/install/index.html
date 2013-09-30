@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>公司订餐系统安装程序</title>
+</head>
+<body>
+<p style="color:red;<{if $msg}>display:block<{else}>display:none<{/if}>" ><{$msg}></p>
+<form method="post">
+ <h4>1、填写配置信息</h4>
+ <p>数据库地址：<input type="text" name="dbhost" value="<{if isset($smarty.post.dbhost)}><{$smarty.post.dbhost}><{else}>localhost<{/if}>"></p>
+ <p>数 据 库名：<input type="text" name="dbname" value="<{if isset($smarty.post.dbname)}><{$smarty.post.dbname}><{/if}>"></p>
+ <p>数据库用户：<input type="text" name="dbuser" value="<{if isset($smarty.post.dbuser)}><{$smarty.post.dbuser}><{else}>root<{/if}>"></p>
+ <p>数据库密码：<input type="text" name="dbpassword" value="<{if isset($smarty.post.dbpassword)}><{$smarty.post.dbpassword}><{/if}>"></p>
+ <p>数据表前缀：<input type="text" name="pre" value="<{if isset($smarty.post.pre)}><{$smarty.post.pre}><{else}>book_<{/if}>"></p>
+ 
+  <h4>2、填写管理员信息</h4>
+  <p>所在部 门 ：<input type="text" name="department" value="<{if isset($smarty.post.department)}><{$smarty.post.department}><{else}>网络部<{/if}>"></p>
+  <p>管理员姓名：<input type="text" name="username" value="<{if isset($smarty.post.username)}><{$smarty.post.username}><{/if}>"></p>
+  <p>管理员密码：<input type="text" name="password" value="<{if isset($smarty.post.password)}><{$smarty.post.password}><{/if}>"></p>
+  <p>管理员  qq ：<input type="text" name="qq" value="<{if isset($smarty.post.qq)}><{$smarty.post.qq}><{/if}>"></p>
+  <p>管理员电话：<input type="text" name="tel" value="<{if isset($smarty.post.tel)}><{$smarty.post.tel}><{/if}>"></p>
+  
+  
+  <p><input type="submit" value="提交"></p>
+</form>
+</body>
+</html>

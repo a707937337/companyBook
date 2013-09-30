@@ -1,0 +1,5 @@
+<form id="pagerForm" action="<{$smarty.const.NOW_URL}>" method="post">
+	<input type="hidden" name="pageNum" value="1"/>
+	<input type="hidden" name="orderField" value="<{if isset($smarty.post.orderField)}><{$smarty.post.orderField}><{/if}>"/>
+	<input type="hidden" name="orderDirection" value="<{if isset($smarty.post.orderDirection)}><{$smarty.post.orderDirection}><{/if}>"/>
+</form>

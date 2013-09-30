@@ -1,0 +1,38 @@
+<div class="pageContent">
+<form method="post" action="<{$smarty.const.SITE_URL}>index.php/user/save" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+<div class="pageFormContent" layoutH="58">
+<div class="unit">
+  <label>姓名：</label><input type="text" class="required"   name="name" value="">
+ </div>
+<div class="unit">
+  <label>上级部门：</label>
+  <select class="combox"  name="department_id">
+  	<{$dep}>
+  </select>
+ </div>
+ <div class="unit">
+  <label>qq：</label><input type="text" class="required"   name="qq" value="">
+ </div>
+ <div class="unit">
+  <label>tel：</label><input type="text" class="required"   name="tel" value="">
+ </div>
+ <div class="unit">
+  <label>角色：</label>
+  <select class="combox"  name="role_id">
+	<option value="">请选择</option>
+  	<option value="2">管理员</option>
+  	<option value="1">普通会员</option>
+  </select>
+ </div>
+ <div class="unit">
+  <label>密码：</label><input type="password" class="required"     name="password" value="">  
+ </div>
+</div>
+<div class="formBar">
+<ul>
+ <li>
+  <div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div>
+</li>
+<li>
+   <div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div>
+   </li></ul></div></form></div>

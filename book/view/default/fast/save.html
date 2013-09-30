@@ -1,0 +1,46 @@
+<div class="pageContent">
+<form method="post" action="<{$smarty.const.SITE_URL}>index.php/fast/save" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+
+<div class="pageFormContent" layoutH="58">
+<div class="unit">
+  <label>菜名：</label><input type="text" class="required"   name="name" value="">
+ </div>
+  <div class="unit">
+    <label>价格：</label><input type="text" class="required"   name="price" value="">  元
+ </div>
+ <div class="unit">
+    <label>餐馆：</label>
+	 <select   name="restaurant_id">
+	 <option value="">请选择</option>
+		<{foreach from=$restaurant item=item}>
+			<option value="<{$item.id}>"><{$item.name}></option>
+		<{/foreach}>
+
+
+	
+	</select>
+	
+	
+ </div>
+ <div class="unit">
+    <label>分类：</label>
+	<select   name="cat_id">
+	<option value="">请选择</option>
+		<{foreach from=$cat item=item}>
+			<option value="<{$item.id}>"><{$item.name}></option>
+		<{/foreach}>
+
+
+	
+	</select>
+	
+ </div>
+</div>
+<div class="formBar">
+<ul>
+ <li>
+  <div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div>
+</li>
+<li>
+   <div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div>
+   </li></ul></div></form></div>

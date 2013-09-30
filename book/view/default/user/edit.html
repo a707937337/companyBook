@@ -1,0 +1,43 @@
+<div class="pageContent">
+<form method="post" action="<{$smarty.const.SITE_URL}>index.php/user/edit" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+<input type="hidden" name="id" value="<{$data.id}>" />
+<div class="pageFormContent" layoutH="58">
+<div class="unit">
+  <label>姓名：</label><input type="text" class="required"   name="name" value="<{$data.name}>">
+ </div>
+ <div class="unit">
+  <label>部门：</label>
+  <select class="combox"  name="department_id">
+  	<{$dep}>
+  </select>
+ </div>
+ <div class="unit">
+  <label>qq：</label><input type="text" class="required"   name="qq" value="<{$data.qq}>">
+ </div>
+ <div class="unit">
+  <label>tel：</label><input type="text" class="required"   name="tel" value="<{$data.tel}>">
+ </div>
+ <div class="unit">
+  <label>角色：</label>
+  <{if $user.role_id==2}>
+  <select class="combox"  name="role_id">
+	<option <{if $data.role_id eq 1}> selected="selected" <{/if}>  value="1">普通会员</option>
+  	<option <{if $data.role_id eq 2}> selected="selected" <{/if}>  value="2" >管理员</option>
+  	
+  </select>
+  <{else}>
+	<input type="text"  disabled="disabled"  value="普通会员"/>   <input type="hidden"    name="role_id" value="1">
+  <{/if}>
+ </div>
+ <div class="unit">
+  <label>密码：</label><input type="password"    name="password" value="">   <span> 密码不修改请留空 </span>
+ </div>
+</div>
+<div class="formBar">
+<ul>
+ <li>
+  <div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div>
+</li>
+<li>
+   <div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div>
+   </li></ul></div></form></div>

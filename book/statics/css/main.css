@@ -1,0 +1,39 @@
+#header li.welcome{
+	color:black;
+	border:none;
+	background:none;
+}
+#header .nav li a {
+    color: black;
+}
+#header .logo {
+	
+}
+
+#header{
+	height:52px;
+}
+#leftside,#container,#splitBar{
+	top:55px;
+}
+#header .nav{
+	top:10px;
+}
+#header .themeList {
+	top:30px;
+}
+.tree li{
+	padding-top:5px;
+}
+ul.navTab-tab{
+	left:0px;
+}
+.accountInfo {
+	background:none;
+}
+.accountInfo .alertInfo {
+    border: none;
+    height: 60px;
+    padding-left: 10px;
+    width: 300px;
+}
