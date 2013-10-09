@@ -62,9 +62,12 @@ class departmentModel extends model{
 		if($result) {
 			foreach($result as $key => $value) {
 				if($nowid==$value['id']){
+					
 					$flag = 'selected="selected"';
+					$list.='<option '.$flag.'  value="'.$value['id'].'">'.$this->getNbsp($level).'|-'.$value['name'].'</option>';
+				}else{
+					$list.='<option   value="'.$value['id'].'">'.$this->getNbsp($level).'|-'.$value['name'].'</option>';
 				}
-				$list.='<option '.$flag.'  value="'.$value['id'].'">'.$this->getNbsp($level).'|-'.$value['name'].'</option>';
 				$list.=$this->_MakeTree($value['id'],$nowid,$level+1);
 			}
 		}
