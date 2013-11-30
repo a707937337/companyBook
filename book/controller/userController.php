@@ -46,6 +46,8 @@ class userController extends commonController {
 		$password = fpBase('http')->getPost('password');
 		if(empty($password)){
 			unset($_POST['password']);
+		}else{
+			$_POST['password'] = md5($_POST['password']);
 		}
 		if(fpBase('http')->isPost()){
 			fpBase('cache')->write('user_uid_'.get_cookie('uid'),null);
