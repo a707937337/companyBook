@@ -19,10 +19,10 @@
 <div class="pageContent">
     <div class="panelBar">
 		<ul class="toolBar">
-			<li><a class="add" href="<{$smarty.const.SITE_URL}>index.php/fast/save" target="dialog" mask="true"><span>添加</span></a></li>
+			<{if $user.role_id==2}><li><a class="add" href="<{$smarty.const.SITE_URL}>index.php/fast/save" target="dialog" mask="true"><span>添加</span></a></li>
 			<li><a class="delete" href="<{$smarty.const.SITE_URL}>index.php/fast/delete/id/{sid_obj}" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
 			<li><a class="edit" href="<{$smarty.const.SITE_URL}>index.php/fast/edit/id/{sid_obj}" target="dialog" mask="true"><span>修改</span></a></li>
-			<li class="line">line</li>
+			<li class="line">line</li><{/if}>
 		</ul>
 	</div>
 	<table class="table" width="100%" layoutH="115">
