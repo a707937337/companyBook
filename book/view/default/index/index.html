@@ -37,13 +37,14 @@
 					
 					<div class="accordionContent">
 						<ul class="tree treeFolder">
-								
+									<li><a  onclick="location.href=''">订餐大厅</a></li>
 									<li><a href="<{$smarty.const.SITE_URL}>index.php/fast/index" target="navTab" rel="w_validation">菜单大全</a></li>
 									<{if $user.role_id==2}><li><a href="<{$smarty.const.SITE_URL}>index.php/restaurant/index" target="navTab" rel="w_button">餐厅菜馆</a></li>
 									<li><a href="<{$smarty.const.SITE_URL}>index.php/cat/index" target="navTab" rel="w_textInput">菜单分类</a></li>
 									<li><a href="<{$smarty.const.SITE_URL}>index.php/department/index" target="navTab" rel="w_combox">部门分类</a></li>
 									<li><a href="<{$smarty.const.SITE_URL}>index.php/user/index" target="navTab" rel="w_checkbox">用户管理</a></li><{/if}>
 									<li><a href="<{$smarty.const.SITE_URL}>index.php/book/index" target="navTab" rel="w_checkbox">我的订单</a></li>
+									
 									
 						</ul>
 					</div>
