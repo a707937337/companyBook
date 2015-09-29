@@ -6,6 +6,7 @@ class mysql{
 	public $curlink;
 	public $version = null;
 	private static $instance;
+	public $query_num = 0;
 	
 	
 	
